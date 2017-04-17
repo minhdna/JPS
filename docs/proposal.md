@@ -3,4 +3,4 @@ layout: default
 title: Proposal
 ---
 
-#Proposal For CS175 AI Project
+## Proposal For CS175 AI Project
