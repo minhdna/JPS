@@ -6,8 +6,8 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid
+## Jacob Chan
+***UCI Net ID***: jacobc4
 
 ## USER 2
 ***UCI Net ID***: ucinetid
