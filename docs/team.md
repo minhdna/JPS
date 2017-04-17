@@ -9,8 +9,8 @@ title:  Team
 ## Jacob Chan
 ***UCI Net ID***: jacobc4
 
-## USER 2
+## Minh Nguyen
 ***UCI Net ID***: ucinetid
 
-## USER 3
+## Tony Lee
 ***UCI Net ID***: ucinetid
