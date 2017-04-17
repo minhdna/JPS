@@ -10,7 +10,7 @@ title:  Team
 ***UCI Net ID***: jacobc4
 
 ## Minh Nguyen
-***UCI Net ID***: ucinetid
+***UCI Net ID***: nhatmn
 
 ## Tony Lee
-***UCI Net ID***: ucinetid
+***UCI Net ID***: tonyhl1
