@@ -17,6 +17,6 @@ We plan on using Monte Claro policy evaluation to find the optimal path of a puz
     
 ### Evaluation Plans
 
-Based on the optimal path and the path given by our agent at the end of the mission, we calculate the cost of the generated path. The reinforcement learning will optimize the cost and converge to an optimal ... To verify that our algorithm works, we will measure the error at each iteration and see wether it decreases monotonically and wither it converges to a final value.
+Based on the optimal path and the path given by our agent at the end of the mission, we calculate the cost of the generated path. The reinforcement learning will optimize the cost and converge to an optimal value. To verify that our algorithm works, we will measure the error at each iteration and see wether it decreases monotonically and wither it converges to a final value.
 
 To verify if our agent is properly trained, we will run the agent of a maze it has never seen before and ask it to traverse it. We will consider the project a success if the cost generated is within a threshold from the optimal path. As a sanity case, we will use a simple maze. It will likely have a small number of blocks and few missing blocks. Our moonshot case is solving a large puzzle with sparse blocks that have large gaps inbetween blocks. It would not have to find the optimal path but only be able to solve the puzzle. 
