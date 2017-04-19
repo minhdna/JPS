@@ -4,7 +4,7 @@ title: Proposal
 ---
 
 ## PROPOSAL FOR CS175 AI PROJECT
-#### Met with professor on April 26, 2017
+#### Met with professor on May 1, 2017
 
 
 ### Summary for Project
