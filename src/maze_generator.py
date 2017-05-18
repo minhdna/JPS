@@ -43,19 +43,19 @@ if agent_host.receivedArgument("help"):
     print agent_host.getUsage()
     exit(0)
 
-mission_file = './maze_generator.xml'
+mission_file = './mazes/maze_simple.xml'
 with open(mission_file, 'r') as f:
     print "Loading mission from %s" % mission_file
     mission_xml = f.read()
     my_mission = MalmoPython.MissionSpec(mission_xml, True)
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-for x in range(1,6):
-    for z in range(1,6):
-        my_mission.drawBlock(x,4,z,"diamond_block")
+# for x in range(1,6):
+#     for z in range(1,6):
+#         my_mission.drawBlock(x,4,z,"diamond_block")
+# my_mission.drawBlock(1,4,1,"emerald_block")
+# my_mission.drawBlock(5,4,5,"redstone_block")
 
-my_mission.drawBlock(1,4,1,"emerald_block")
-my_mission.drawBlock(5,4,5,"redstone_block")
 
 # Attempt to start a mission:
 max_retries = 3
