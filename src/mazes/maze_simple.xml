@@ -35,9 +35,16 @@
                 <Placement x="1.5" y="5" z="1.5" yaw="270"/>
                 </AgentStart>
                 <AgentHandlers>
+                  <DiscreteMovementCommands/>
                   <ObservationFromFullStats/>
+                  <RewardForTouchingBlockType>
+                    <Block reward="-100.0" type="lava" behaviour="onceOnly"/>
+                    <Block reward="100.0" type="lapis_block" behaviour="onceOnly"/>
+                  </RewardForTouchingBlockType>
+                  <RewardForSendingCommand reward="-1" />
                   <AgentQuitFromTouchingBlockType>
-                    <Block type="redstone_block"/>
+                    <Block type="lava" />
+                    <Block type="redstone_block" />
                   </AgentQuitFromTouchingBlockType>
                 </AgentHandlers>
               </AgentSection>
