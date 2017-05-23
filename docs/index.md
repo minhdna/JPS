@@ -17,4 +17,7 @@ title:  Home
 
 ## the ability to jump has been imperative to the evolvement of modern gaming.
 
+## NOW...JPS brings the jumping puzzle to Minecraft!
+
+
 [quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
