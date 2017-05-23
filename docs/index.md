@@ -9,7 +9,7 @@ title:  Home
 
 ## to jumping from building to building in search of your target in Assassin's Creed...
 
-<img src="http://www.gamersdecide.com/sites/default/files/authors/u14586/4.jpg" alt="Assassin's Creed">
+<img src="http://popsci.typepad.com/photos/uncategorized/2007/11/13/assassins_creed_60.jpg" alt="Assassin's Creed">
 
 ## to traversing the uncharted lands in search of treasure...
 
