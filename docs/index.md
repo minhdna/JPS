@@ -21,7 +21,7 @@ title:  Home
 
 ## NOW...JPS brings the jumping puzzle to Minecraft!
 
-<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/18685587_10203080186243765_1660235747_n.png?oh=1dda737cb6553a55da9add74ebc6fdd7&oe=5925A6F6" height="491" width="873">
+<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/18644380_10203080189843855_627161562_n.png?oh=6b08f3653656756160a72f97fda150c1&oe=5925793F" height="491" width="873">
 
 
 [quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
