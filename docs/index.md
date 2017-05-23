@@ -5,9 +5,9 @@ title:  Home
 ## The concept of a jumping puzzle has been around for decades. 
 ## From jumping across small gaps in the early stages of Super Mario...
 
-<img src="https://i.ytimg.com/vi/Fn13y0s7hao/maxresdefault.jpg" alt="Super Mario">
+<img src="https://i.ytimg.com/vi/Fn13y0s7hao/maxresdefault.jpg" alt="Super Mario">{ width=50% }
 
-##                  to jumping from building to building in search of your target in Assassin's Creed...
+## to jumping from building to building in search of your target in Assassin's Creed...
 
 <img src="http://www.gamersdecide.com/sites/default/files/authors/u14586/4.jpg" alt="Assassin's Creed">
 
