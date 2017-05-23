@@ -1,10 +1,7 @@
 ---
 layout: default
-title:  Meet Our Team
+title:  Meet the Team
 ---
-
-# {{ page.title }}
-
 
 ## Jacob Chan
 ***UCI Net ID***: jacobc4
