@@ -17,6 +17,8 @@ title:  Home
 
 ## the ability to jump has been imperative to the evolvement of modern gaming.
 
+<img src="http://static.mnium.org/images/contenu/unes/big/gw2_jumping_puzzle_05.jpg" height="491" width="873" alt="Guild Wars">
+
 ## NOW...JPS brings the jumping puzzle to Minecraft!
 
 
