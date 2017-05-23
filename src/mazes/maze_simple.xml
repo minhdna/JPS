@@ -16,13 +16,13 @@
                 <ServerHandlers>
                   <FlatWorldGenerator generatorString="3;10;12;"/>
                     <DrawingDecorator>
-                      <DrawBlock x="1"  y="4" z="1" type="emerald_block" />
-                      <DrawBlock x="2"  y="4" z="1" type="diamond_block" />
-                      <DrawBlock x="2"  y="4" z="3" type="diamond_block" />
-                      <DrawBlock x="2"  y="4" z="4" type="diamond_block" />
-                      <DrawBlock x="2"  y="4" z="5" type="diamond_block" />
-                      <DrawBlock x="4"  y="4" z="3" type="diamond_block" />
-                      <DrawBlock x="4"  y="4" z="5" type="redstone_block" />
+                      <DrawBlock x="1"  y="2" z="1" type="emerald_block" />
+                      <DrawBlock x="2"  y="2" z="1" type="diamond_block" />
+                      <DrawBlock x="2"  y="2" z="3" type="diamond_block" />
+                      <DrawBlock x="2"  y="2" z="4" type="diamond_block" />
+                      <DrawBlock x="2"  y="2" z="5" type="diamond_block" />
+                      <DrawBlock x="4"  y="2" z="3" type="diamond_block" />
+                      <DrawBlock x="4"  y="2" z="5" type="redstone_block" />
                     </DrawingDecorator>
                   <ServerQuitFromTimeUp timeLimitMs="30000"/>
                   <ServerQuitWhenAnyAgentFinishes/>
@@ -32,14 +32,14 @@
               <AgentSection mode="Survival">
                 <Name>MalmoTutorialBot</Name>
                 <AgentStart>
-                <Placement x="1.5" y="5" z="1.5" yaw="270"/>
+                <Placement x="1.5" y="3" z="1.5" yaw="270"/>
                 </AgentStart>
                 <AgentHandlers>
-                  <DiscreteMovementCommands/>
+                  <AbsoluteMovementCommands/>
                   <ObservationFromFullStats/>
                   <RewardForTouchingBlockType>
                     <Block reward="-100.0" type="lava" behaviour="onceOnly"/>
-                    <Block reward="100.0" type="lapis_block" behaviour="onceOnly"/>
+                    <Block reward="100.0" type="redstone_block" behaviour="onceOnly"/>
                   </RewardForTouchingBlockType>
                   <RewardForSendingCommand reward="-1" />
                   <AgentQuitFromTouchingBlockType>
