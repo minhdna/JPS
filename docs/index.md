@@ -3,6 +3,6 @@ layout: default
 title:  Home
 ---
 
-<img src="C:\Users\Jacob\Documents\2017 Spring\CS175\pictures\mario.jpg" alt="Mario jumping">
+<img src="https://www.technologyuk.net/computer-gaming/gaming-landmarks/images/gaming_landmarks_0094.gif" alt="Mario jumping">
 
 [quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
