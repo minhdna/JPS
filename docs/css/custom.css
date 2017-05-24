@@ -8,8 +8,6 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   background-image: url("https://www.colourbox.com/preview/9311977-industry-motherboard-computer-and-electronics-modern-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   color: white;
 }
 
