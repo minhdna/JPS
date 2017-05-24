@@ -7,15 +7,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  <div style="background-color:#7bceeb;">
-<!--[if gte mso 9]>
-    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">
-    <v:fill type="frame" src="https://i.ytimg.com/vi/1Ufb73oT4TE/maxresdefault.jpg"color="#7bceeb" />
-    <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
-        <![endif]-->
- <table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0">
-   <tr>
-     <td valign="top" align="left" background="https://i.ytimg.com/vi/1Ufb73oT4TE/maxresdefault.jpg" style="background-repeat:no-repeat; background-size:cover;"> 
+  <img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/18643559_10203080224004709_1461385573_n.png?oh=e3e42d987bb4ec9161ae9848f12f562d&oe=59266F11" height="491" width="873">
 }
 
 .footer {
