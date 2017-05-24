@@ -9,8 +9,8 @@ title: Proposal
 
 ### Summary for Project
 
-For our project, we chose our agent to solve a Jumping Puzzle. <br />
-The Jumping Puzzle has a start and a destination block. <br />
+For our project, we chose our agent to solve a Jumping Puzzle. The Jumping Puzzle has a start  <br />
+and a destination block. <br />
 The agent must get from the start to the destination block. <br />
 However, unlike regular mazes, mazes in the Jumping Puzzle <br /> 
 have missing blocks that the agent can fall through. <br /> 
