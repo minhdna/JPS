@@ -17,16 +17,17 @@ will be the generated maze mission. The agent will not be aware of its environme
 information about the current state. The output of each mission will be the path the agent found <br />
 and a cost of the path the agent found from the optimal path. <br />
 
-The ability for a character to jump is a key mechanism in many successful games. Jumping Puzzles takes <br />
-this mechanism to a whole new level in which the player's knowledge of where to jump and when to jump can <br />
-decide whether they pass the level or not. Games like Guild Wars and Assassin's creed implement this feature <br />
-to some extent while games like Super Mario are based entirely on Jumping Puzzles. A Jumping Puzzle AI would <br />
-allow game developers to test whether a Jumping Puzzle is able to be completed/whether it is too easy or hard. <br />
-The field of robotics is fairly new but that doesn't stop researchers from having visions of robots saving people <br />
-from catastrophes or fighting in wars in place of humans. Like Minecraft, the real world is not just flat lands. <br /> 
-If a robot is going to perform those functions, it will need to be able to, not only walk, but to learn to climb <br />
-and maybe even jump! That is why we find a Jumping Puzzle AI to be very interesting and we hope to potentially <br />
-unearth many more applications it has on the world. <br />
+The ability for a character to jump is a key mechanism in many successful games. Jumping Puzzles <br />
+takes this mechanism to a whole new level in which the player's knowledge of where to jump and <br />
+when to jump can decide whether they pass the level or not. Games like Guild Wars and Assassin's <br />
+creed implement this feature to some extent while games like Super Mario are based entirely on <br />
+Jumping Puzzles. A Jumping Puzzle AI would allow game developers to test whether a Jumping Puzzle <br />
+is able to be completed/whether it is too easy or hard. The field of robotics is fairly new but <br />
+that doesn't stop researchers from having visions of robots saving people from catastrophes or <br />
+fighting in wars in place of humans. Like Minecraft, the real world is not just flat lands. <br /> 
+If a robot is going to perform those functions, it will need to be able to, not only walk, <br />
+but to learn to climb and maybe even jump! That is why we find a Jumping Puzzle AI to be very <br />
+interesting and we hope to potentially unearth many more applications it has on the world. <br />
     
 ### AI/ML Algorithms
 
