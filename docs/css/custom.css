@@ -29,6 +29,7 @@ body {
 
 body > .container {
   padding: 60px 15px 0;
+  color: white;
 }
 .container .text-muted {
   margin: 20px 0;
