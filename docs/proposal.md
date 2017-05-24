@@ -31,10 +31,20 @@ interesting and we hope to potentially unearth many more applications it has on 
     
 ### AI/ML Algorithms
 
-We plan on using Monte Claro Policy Evaluation to find the optimal path of a puzzle. We then hope to use reinforcement learning to train our agent on the optimal path to be able to solve any Jumping Puzzle.
+We plan on using Monte Claro Policy Evaluation to find the optimal path of a puzzle. <br />
+We then hope to use reinforcement learning to train our agent on the optimal path to <br />
+be able to solve any Jumping Puzzle. <br />
     
 ### Evaluation Plans
 
-Based on the optimal path and the path given by our agent at the end of the mission, we calculate the cost of the generated path. The reinforcement learning will optimize the cost and converge to an optimal value. To verify that our algorithm works, we will measure the error at each iteration and see whether it decreases monotonically and whether it converges to a final value.
+Based on the optimal path and the path given by our agent at the end of the mission, we <br />
+calculate the cost of the generated path. The reinforcement learning will optimize the cost <br />
+and converge to an optimal value. To verify that our algorithm works, we will measure the error at <br />
+each iteration and see whether it decreases monotonically and whether it converges to a final value. <br />
 
-To verify if our agent is properly trained, we will give it a puzzle it has never seen before and ask it to solve it. We will consider the project a success if the cost generated is within a threshold from the optimal path. As a sanity case, we will use a simple maze. It will likely have a small number of blocks and a few missing blocks. It would not have to find the optimal path but only be able to solve the puzzle. Our moonshot case is solving a large puzzle with sparse blocks that have large gaps between blocks. It would find the optimal path.
+To verify if our agent is properly trained, we will give it a puzzle it has never seen before and ask it <br />
+to solve it. We will consider the project a success if the cost generated is within a threshold from the <br />
+optimal path. As a sanity case, we will use a simple maze. It will likely have a small number of blocks <br />
+and a few missing blocks. It would not have to find the optimal path but only be able to solve the <br />
+puzzle. Our moonshot case is solving a large puzzle with sparse blocks that have large gaps between <br />
+blocks. It would find the optimal path. <br />
