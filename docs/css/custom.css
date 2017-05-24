@@ -7,10 +7,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background-image: url("https://i.ytimg.com/vi/1Ufb73oT4TE/maxresdefault.jpg");
-  background-size: cover;
-  background-repeat: no-repeat center center fixed;
-  color: white;
+  body.statusClass {background:url("https://i.ytimg.com/vi/1Ufb73oT4TE/maxresdefault.jpg") no-repeat;}
 }
 
 .footer {
