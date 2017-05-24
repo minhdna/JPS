@@ -7,8 +7,10 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background-image: url("https://designbump.com/wp-content/uploads/2016/01/Cool-Wood-Texture-Background-10.jpg");
-  color: black;
+  background-image: url("https://i.ytimg.com/vi/1Ufb73oT4TE/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat center;
+  color: white;
 }
 
 .footer {
