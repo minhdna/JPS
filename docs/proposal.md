@@ -31,7 +31,7 @@ potentially unearth many more applications it has on the world. <br />
     
 ### AI/ML Algorithms
 
-We plan on using Monte Claro Policy Evaluation to find the optimal path of a puzzle. We then hope to <br /> 
+We plan on using Monte Carlo Policy Evaluation to find the optimal path of a puzzle. We then hope to <br /> 
 use reinforcement learning to train our agent on the optimal path to be able to solve any Jumping Puzzle. <br />
     
 ### Evaluation Plans
