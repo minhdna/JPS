@@ -11,11 +11,11 @@ title: Proposal
 
 For our project, we chose our agent to solve a Jumping Puzzle. The Jumping Puzzle has a start and <br />
 a destination block. The agent must get from the start to the destination block. However, unlike <br />
-regular mazes, mazes in the Jumping Puzzle have missing blocks that the agent can fall through. <br /> 
-The agent must avoid these gaps and successfully reach the destination block. Our input semantics <br />
-will be the generated maze mission. The agent will not be aware of its environment and only has <br />
-information about the current state. The output of each mission will be the path the agent found <br />
-and a cost of the path the agent found from the optimal path. <br />
+regular mazes, mazes in the Jumping Puzzle have missing blocks that the agent can fall through. The <br />
+agent must avoid these gaps and successfully reach the destination block. Our input semantics will <br />
+be the generated maze mission. The agent will not be aware of its environment and only has information <br />
+about the current state. The output of each mission will be the path the agent found and a cost of <br />
+the path the agent found from the optimal path. <br />
 
 The ability for a character to jump is a key mechanism in many successful games. Jumping Puzzles <br />
 takes this mechanism to a whole new level in which the player's knowledge of where to jump and <br />
