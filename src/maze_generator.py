@@ -10,7 +10,7 @@ import random
 
 class TabQAgent:
     """Reinforcement learning agent for discrete state/action spaces."""
-    def __init__(self, alpha=0.3, gamma=1, n=1):
+    def __init__(self, alpha=0.2, gamma=0.8, n=0.9):
         """Constructing an RL agent.
                 Args
                     alpha:  <float>  learning rate      (default = 0.3)
