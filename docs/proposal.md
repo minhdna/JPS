@@ -3,7 +3,7 @@ layout: default
 title: Proposal
 ---
 
-## PROPOSAL FOR CS175 AI PROJECT
+## PROPOSAL FOR JPS
 #### Met with professor on May 1, 2017
 
 
