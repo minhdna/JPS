@@ -18,13 +18,27 @@ class TabQAgent:
                     n:      <int>    number of back steps to update (default = 1)
                 """
         self.epsilon = 0.01 # chance of taking a random action instead of the best
-        self.actions = ["movenorth 1", "movesouth 1", "movewest 1", "moveeast 1", ]
+        self.actions = ["movenorth 1", "movesouth 1", "movewest 1", "moveeast 1", "jumpnorth 2", "jumpsouth 2", "jumpeast 2", "jumpwest 2"] #untranslated actions list
+        #action list
         self.q_table = {}
         self.n, self.gamma, self.alpha = n, alpha, gamma
 
+    def sendTranslatedCommand(self, agent_host, action, curr_x, curr_z):
+        """translate self.actions into tp command based on current x,z, 
+        can implement y later: make sure if move y, checker doesn't check for y position"""
+        index = self.actions.index(action)
+        command_verbs = ["tpz ", "tpz ", "tpx ", "tpx ", "tpz ", "tpz ", "tpx ", "tpx "]
+        coor_move = [1, -1, 1, -1, 2, -2, 2, -2]
+        if command_verbs[index] == "tpz ":
+            coor_move[index] += curr_z
+        else:
+            coor_move[index] += curr_x
+        command_verbs[index] += "{0:0.1f}".format(coor_move[index])
+        agent_host.sendCommand(command_verbs[index])
+
+
     def act(self, world_state, agent_host, current_r):
         """take 1 action in response to the current world state"""
-
         obs_text = world_state.observations[-1].text
         obs = json.loads(obs_text)  # most recent observation
         if not u'XPos' in obs or not u'ZPos' in obs:
@@ -54,7 +68,8 @@ class TabQAgent:
             a = l[y]
 
         # send the selected action
-        agent_host.sendCommand(self.actions[a])
+        #agent_host.sendCommand(self.actions[a])
+        self.sendTranslatedCommand(agent_host, self.actions[a], obs[u'XPos'], obs[u'ZPos'])
         self.prev_s = current_s
         self.prev_a = a
 
@@ -65,7 +80,7 @@ class TabQAgent:
 
         total_reward = 0
         current_r = 0
-        tol = 0.01
+        tol = 0.1
 
         self.prev_s = None
         self.prev_a = None
@@ -142,8 +157,9 @@ class TabQAgent:
                 print 'New position from observation:', curr_x, ',', curr_z, 'after action:', self.actions[
                     self.prev_a],  # NSWE
                 if check_expected_position:
-                    expected_x = prev_x + [0, 0, -1, 1][self.prev_a]
-                    expected_z = prev_z + [-1, 1, 0, 0][self.prev_a]
+                    #checker [1, -1, 1, -1, 2, -2, 2, -2]
+                    expected_x = prev_x + [0, 0, 1, -1, 0, 0, 2, -2][self.prev_a]
+                    expected_z = prev_z + [1, -1, 0, 0, 2, -2, 0, 0][self.prev_a]
                     if math.hypot(curr_x - expected_x, curr_z - expected_z) > tol:
                         print ' - ERROR DETECTED! Expected:', expected_x, ',', expected_z
                         raw_input("Press Enter to continue...")
@@ -226,7 +242,8 @@ for imap in xrange(num_maps):
         mission_xml = f.read()
         my_mission = MalmoPython.MissionSpec(mission_xml, True)
     my_mission.removeAllCommandHandlers()
-    my_mission.allowAllDiscreteMovementCommands()
+    #my_mission.allowAllDiscreteMovementCommands()
+    my_mission.allowAllAbsoluteMovementCommands()
     my_mission.requestVideo(320, 240)
     my_mission.setViewpoint(1)
 
@@ -237,7 +254,7 @@ for imap in xrange(num_maps):
     agentID = 0
     expID = 'tabular_q_learning'
 
-    num_repeats = 150
+    num_repeats = 1500
     cumulative_rewards = []
     for i in range(num_repeats):
 
