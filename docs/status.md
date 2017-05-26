@@ -20,12 +20,15 @@ be able to solve a large maze with 3 floors (10x10x3).
 We started off the base of our algorithm expecting our agent to navigate <br />
 through a map without using any jumping commands. We implemented a Q-learning <br />
 algorithm using the agent’s coordinates as states and [movenorth, movesouth, <br />
-moveeast, movewest] as our action space. Every one step taken in any direction <br />
+moveeast, movewest] as our action space with an epslon-greedy exploration. Every <br />
+one step taken in any direction <br />
 costs 1 point. If the agent dies, 100 points will be deducted from the total <br />
 reward. Reaching the goal awards the agent 100 points. After our Q-learning <br />
 algorithm started to work properly, we took it a step further toward our goal <br />
 by implementing a map, where the agent must perform at least 1 jump in order to <br />
-reach the goal node. 
+reach the goal node. The update equation of the Q-learning algorithm:<br />
+
+  Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>)
  
 We needed to expand our action list to include jumping 2 blocks in <br />
 order to get over gaps. This was when we faced our first challenge. When we <br />
@@ -36,6 +39,12 @@ discrete movements to move more than 1 block at a time. Therefore, we have to <b
 change our approach by implementing Absolute Movement. Teleportation allows us <br />
 to easily implement how far we would want our agent to “jump”, or “walk” in <br />
 order to tackle the challenging jumping puzzle. 
+
+After getting a base project, we noticed the agent converged slowly for the simple puzzle<br />
+so we changed the parameters of our agent. We mainly focused on speeding up convergence <br />
+speeds so we lowered the discount factor, gamma, from 1.0 to 0.8. We also decided to lower<br />
+epsilon to 0.01. We also changed the learning rate, alpha, to 0.2 from 0.3. We believe that<br />
+these changed have helped our agent find the optimal solution to the puzzle faster.
 
 
 ### Evaluation
