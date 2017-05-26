@@ -17,25 +17,25 @@ be able to solve a large maze with 3 floors (10x10x3).
 
 ### Approach
 
-We started off the base of our algorithm expecting our agent to navigating <br />
+We started off the base of our algorithm expecting our agent to navigate <br />
 through a map without using any jumping commands. We implemented a Q-learning <br />
 algorithm using the agent’s coordinates as states and [movenorth, movesouth, <br />
-moveeast, movewest] as our actions space. Every one step taken in any direction <br />
+moveeast, movewest] as our action space. Every one step taken in any direction <br />
 costs 1 point. If the agent dies, 100 points will be deducted from the total <br />
 reward. Reaching the goal awards the agent 100 points. After our Q-learning <br />
-algorithm started to work properly, we take it a step further toward our goal <br />
+algorithm started to work properly, we took it a step further toward our goal <br />
 by implementing a map, where the agent must perform at least 1 jump in order to <br />
 reach the goal node. 
  
-We needed to expand our action list to include jumping 2 blocks actions (in <br />
-order to get over gaps. This was when we face our first challenge. When we <br />
-started, we originally let the agent navigate around a simple puzzle with using <br />
+We needed to expand our action list to include jumping 2 blocks in <br />
+order to get over gaps. This was when we faced our first challenge. When we <br />
+started, we originally let the agent navigate around a simple puzzle without using <br />
 Discrete Movements. We realized that it is difficult (or even impossible) to <br />
 have our agent jump 2 blocks (to get over gaps) since Malmo does not allow <br />
-discrete movement to move more than 1 block at a time. Therefore, we have to <br />
+discrete movements to move more than 1 block at a time. Therefore, we have to <br />
 change our approach by implementing Absolute Movement. Teleportation allows us <br />
 to easily implement how far we would want our agent to “jump”, or “walk” in <br />
-order to navigate the challenging jump puzzle. 
+order to tackle the challenging jumping puzzle. 
 
 
 ### Evaluation
