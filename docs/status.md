@@ -61,10 +61,12 @@ on have very limited amount of possible moves (where he can survive) in the begi
 The graph also plateaued as expected around 4 moves, which means our agent is learning <br />
 the jumping puzzle successfully. <br /> <br/> 
 
-Another evaluation we did on our learning agent is to assess the cumulative reward. For this <br />
-evaluation, we expect the agent's reward to be extremely low (> -100) in the beginning, where <br /> 
-it dies alot. Later on, we expect the cummulative reward to be consistently high (96 points) as <br />
-the agent converges. <br />
+After creating an agent that will successfully converge on a simple map, we then created more <br />
+complex maps for our agent to solve. This tested the convergence rate of our agent and allowed us <br />
+to tweak the agent to perform better. Another evaluation we did on our learning agent is to assess the <br />
+cumulative reward. For this evaluation, we expect the agent's reward to be extremely low (> -100) <br />
+in the beginning, where it dies alot. Later on, we expect the cummulative reward to be consistently <br />
+high (96 points) as the agent converges. <br />
 <img src="https://puu.sh/w25Za/618b9e08f2.jpg" height="260" width="380" alt="Cumulative Reward"> <br />
 As expected, the graph above shows that our agent is able to learn and navigate through the jumping <br />
 puzzle. After dying a lot in the beginning, where it reaches really low negative rewards, the agent <br />
