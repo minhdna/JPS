@@ -21,12 +21,11 @@ We started off the base of our algorithm expecting our agent to navigate <br />
 through a map without using any jumping commands. We implemented a Q-learning <br />
 algorithm using the agent’s coordinates as states and [movenorth, movesouth, <br />
 moveeast, movewest] as our action space with an epslon-greedy exploration. Every <br />
-one step taken in any direction <br />
-costs 1 point. If the agent dies, 100 points will be deducted from the total <br />
-reward. Reaching the goal awards the agent 100 points. After our Q-learning <br />
-algorithm started to work properly, we took it a step further toward our goal <br />
-by implementing a map, where the agent must perform at least 1 jump in order to <br />
-reach the goal node. The update equation of the Q-learning algorithm:<br />
+one step taken in any direction costs 1 point. If the agent dies, 100 points will <br />
+be deducted from the total reward. Reaching the goal awards the agent 100 points. <br />
+After our Q-learning algorithm started to work properly, we took it a step further <br />
+toward our goal by implementing a map, where the agent must perform at least 1 jump <br />
+in order to reach the goal node. The update equation of the Q-learning algorithm: <br />
 
   Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * (r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>))
  
