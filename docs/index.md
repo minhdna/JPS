@@ -21,10 +21,10 @@ title:  Home
 
 #### NOW...JPS brings the jumping puzzle to Minecraft!
 
-<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/18644380_10203080189843855_627161562_n.png?oh=6b08f3653656756160a72f97fda150c1&oe=5925793F" height="260" width="380">
+<img src="https://puu.sh/w0wOH/dfb151d88b.jpg" height="260" width="380">
 
 #### Through the use of Microsoft's Project Malmo platform, JPS hopes to pioneer the first Minecraft AI 
 #### that is able to solve multi-floor jumping puzzles in the world of Minecraft. 
-<img src="https://scontent-sjc2-1.xx.fbcdn.net/v/t34.0-12/18643559_10203080224004709_1461385573_n.png?oh=e3e42d987bb4ec9161ae9848f12f562d&oe=59266F11" height="260" width="380">
+<img src="https://puu.sh/w0wPo/f3745cdb44.jpg" height="260" width="380">
 
 [quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
