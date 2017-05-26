@@ -48,6 +48,29 @@ these changed have helped our agent find the optimal solution to the puzzle fast
 
 ### Evaluation
 
+To evaluate our learning agent, we keep track of 2 different values: the number of <br />
+steps taken and the cumulative rewards. First, for the number of steps taken, we <br />
+expect our agent to take a random number of steps (from 1 to 10) in the beginning. <br />
+Later on, as the agent learns the map, it should plateau around 4 steps, which is the <br />
+optimal amount of steps to reach the goal. <br />
+<img src="https://puu.sh/w25BG/124e5bad71.jpg" height="260" width="380" alt="Steps Taken"> <br />
+As you can see from our graph above, the number of steps taken at the beginning are small, <br />
+but random between 1 and 7. This is different than other solving mazes, where it should be <br /> 
+very large in the beginning. This is because the simple jumping puzzle that the agent runs <br />
+on have very limited amount of possible moves (where he can survive) in the beginning. <br />
+The graph also plateaued as expected around 4 moves, which means our agent is learning <br />
+the jumping puzzle successfully. <br /> <br/> 
+
+Another evaluation we did on our learning agent is to assess the cumulative reward. For this <br />
+evaluation, we expect the agent's reward to be extremely low (> -100) in the beginning, where <br /> 
+it dies alot. Later on, we expect the cummulative reward to be consistently high (96 points) as <br />
+the agent converges. <br />
+<img src="https://puu.sh/w25Za/618b9e08f2.jpg" height="260" width="380" alt="Cumulative Reward"> <br />
+As expected, the graph above shows that our agent is able to learn and navigate through the jumping <br />
+puzzle. After dying a lot in the beginning, where it reaches really low negative rewards, the agent <br />
+were able to learn to navigate correctly. Converging around 45th iteration, the graph flattens out at <br />
+96 points, where the agent takes the optimal 4 steps to reach the destination. 
+
 ### Remaining Goals and Challenges
 
 Currently, our agent is very limited in that it is only able to solve a very small, <br />
