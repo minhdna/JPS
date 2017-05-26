@@ -57,7 +57,7 @@ Later on, as the agent learns the map, it should plateau around 4 steps, which i
 optimal amount of steps to reach the goal. <br />
 <img src="https://puu.sh/w25BG/124e5bad71.jpg" height="260" width="380" alt="Steps Taken"> <br />
 As you can see from our graph above, the number of steps taken at the beginning are small, <br />
-but random between 1 and 7. This is different than other solving mazes, where it should be <br /> 
+but fluctuate between 1 and 7. This is different than other solving mazes, where it should be <br /> 
 very large in the beginning. This is because the simple jumping puzzle that the agent runs <br />
 on have very limited amount of possible moves (where he can survive) in the beginning. <br />
 The graph also plateaued as expected around 4 moves, which means our agent is learning <br />
