@@ -21,7 +21,7 @@ be able to solve a large maze with 3 floors (10x10x3).
 We started off the base of our algorithm expecting our agent to navigate <br />
 through a map without using any jumping commands. We implemented a Q-learning <br />
 algorithm using the agent’s coordinates as states and [movenorth, movesouth, <br />
-moveeast, movewest] as our action space with an epslon-greedy exploration policy. Every <br />
+moveeast, movewest] as our action space with an epsilon-greedy exploration policy. Every <br />
 one step taken in any direction costs 1 point. If the agent dies, 100 points will <br />
 be deducted from the total reward. Reaching the goal awards the agent 100 points. <br />
 After our Q-learning algorithm started to work properly, we took it a step further <br />
@@ -46,7 +46,7 @@ to tweak the agent to perform better. We noticed the agent converged slowly for 
 so we changed some parameters of our agent. We mainly focused on speeding up convergence <br />
 speeds so we lowered the discount factor, gamma, from 1.0 to 0.8. We also decided to lower<br />
 epsilon to 0.01. We also changed the learning rate, alpha, to 0.2 from 0.3. We believe that<br />
-these changed have helped our agent find the optimal solution to the puzzle faster.
+these changes have helped our agent find the optimal solution to the puzzle faster.
 
 
 ### Evaluation
@@ -71,7 +71,7 @@ high (96 points) as the agent converges. <br />
 <img src="https://puu.sh/w25Za/618b9e08f2.jpg" height="260" width="380" alt="Cumulative Reward"> <br />
 As expected, the graph above shows that our agent is able to learn and navigate through the jumping <br />
 puzzle. After dying a lot in the beginning, where it reaches really low negative rewards, the agent <br />
-were able to learn to navigate correctly. Converging around 45th iteration, the graph flattens out at <br />
+was able to learn to navigate correctly. Converging around 45th iteration, the graph flattens out at <br />
 96 points, where the agent takes the optimal 4 steps to reach the destination. 
 
 ### Remaining Goals and Challenges
