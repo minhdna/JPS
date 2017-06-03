@@ -38,14 +38,9 @@ class TabQAgent:
         new_z = curr_z + z_move[index]
         command_verb = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(new_x, new_y, new_z)
         agent_host.sendCommand(command_verb)
-        if index >= 4:
-            steps_taken += 3
-        else:
-            steps_taken += 1 #3 for jump
+        #for recording --> evaluation
+        steps_taken += 1
         time.sleep(1.0)
-
-
-
 
 
     def act(self, world_state, agent_host, current_r):
@@ -55,7 +50,7 @@ class TabQAgent:
         if not u'XPos' in obs or not u'ZPos' in obs or not u'YPos' in obs:
             return 0
         current_s = "%d:%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']), int(obs[u'YPos'])) #add y here to change layers
-        #print "State: ", current_s
+        # print "State: ", current_s
 
         if not self.q_table.has_key(current_s):
             self.q_table[current_s] = ([0] * len(self.actions))
@@ -67,7 +62,7 @@ class TabQAgent:
                                                                            + self.gamma * max(
                 self.q_table[current_s]) - old_q)
 
-        #print "new Q_value: ", self.q_table[current_s]
+        # print "new Q_value: ", self.q_table[current_s]
         # select the next action
         rnd = random.random()
         if rnd < self.epsilon:
@@ -94,7 +89,7 @@ class TabQAgent:
 
         total_reward = 0
         current_r = 0
-        tol = 0.5
+        tol = 0.1
 
         self.prev_s = None
         self.prev_a = None
@@ -219,7 +214,7 @@ agent_host = MalmoPython.AgentHost()
 
 # add some args
 agent_host.addOptionalStringArgument('mission_file',
-    'Path/to/file from which to load the mission.', './mazes/maze_simple2.xml')
+    'Path/to/file from which to load the mission.', './mazes/simple2.xml')
 agent_host.addOptionalFloatArgument('alpha',
     'Learning rate of the Q-learning agent.', 0.1)
 agent_host.addOptionalFloatArgument('epsilon',
@@ -270,7 +265,7 @@ for imap in xrange(num_maps):
     agentID = 0
     expID = 'tabular_q_learning'
 
-    num_repeats = 500
+    num_repeats = 200
     cumulative_rewards = []
     for i in range(num_repeats):
         steps_taken = 0
