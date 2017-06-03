@@ -7,10 +7,11 @@ import math
 import sys
 import time
 import random
-
+steps = []
+steps_taken = 0
 class TabQAgent:
     """Reinforcement learning agent for discrete state/action spaces."""
-    def __init__(self, alpha=0.2, gamma=0.8, n=0.9):
+    def __init__(self, alpha=0.3, gamma=1.0, n=1.0):
         """Constructing an RL agent.
                 Args
                     alpha:  <float>  learning rate      (default = 0.3)
@@ -23,27 +24,39 @@ class TabQAgent:
         self.q_table = {}
         self.n, self.gamma, self.alpha = n, alpha, gamma
 
-    def sendTranslatedCommand(self, agent_host, action, curr_x, curr_z):
+    def sendTranslatedCommand(self, agent_host, action, curr_x, curr_z, curr_y):
+        global steps_taken
         """translate self.actions into tp command based on current x,z, 
         can implement y later: make sure if move y, checker doesn't check for y position"""
         index = self.actions.index(action)
-        command_verbs = ["tpz ", "tpz ", "tpx ", "tpx ", "tpz ", "tpz ", "tpx ", "tpx "]
-        coor_move = [1, -1, 1, -1, 2, -2, 2, -2]
-        if command_verbs[index] == "tpz ":
-            coor_move[index] += curr_z
+        #tp x y z
+        x_move = [0, 0, 1, -1, 0, 0, 2, -2]
+        new_x = curr_x + x_move[index]
+        y_move = [0, 0, 0, 0, 1, 1, 1, 1]
+        new_y = curr_y + y_move[index]
+        z_move = [1, -1, 0, 0, 2, -2, 0, 0]
+        new_z = curr_z + z_move[index]
+        command_verb = "tp {0:0.1f} {1:0.1f} {2:0.1f}".format(new_x, new_y, new_z)
+        agent_host.sendCommand(command_verb)
+        if index >= 4:
+            steps_taken += 3
         else:
-            coor_move[index] += curr_x
-        command_verbs[index] += "{0:0.1f}".format(coor_move[index])
-        agent_host.sendCommand(command_verbs[index])
+            steps_taken += 1 #3 for jump
+        time.sleep(1.0)
+
+
+
 
 
     def act(self, world_state, agent_host, current_r):
         """take 1 action in response to the current world state"""
         obs_text = world_state.observations[-1].text
         obs = json.loads(obs_text)  # most recent observation
-        if not u'XPos' in obs or not u'ZPos' in obs:
+        if not u'XPos' in obs or not u'ZPos' in obs or not u'YPos' in obs:
             return 0
-        current_s = "%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']))
+        current_s = "%d:%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']), int(obs[u'YPos'])) #add y here to change layers
+        print "State: ", current_s
+
         if not self.q_table.has_key(current_s):
             self.q_table[current_s] = ([0] * len(self.actions))
 
@@ -54,6 +67,7 @@ class TabQAgent:
                                                                            + self.gamma * max(
                 self.q_table[current_s]) - old_q)
 
+        print "new Q_value: ", self.q_table[current_s]
         # select the next action
         rnd = random.random()
         if rnd < self.epsilon:
@@ -69,7 +83,7 @@ class TabQAgent:
 
         # send the selected action
         #agent_host.sendCommand(self.actions[a])
-        self.sendTranslatedCommand(agent_host, self.actions[a], obs[u'XPos'], obs[u'ZPos'])
+        self.sendTranslatedCommand(agent_host, self.actions[a], obs[u'XPos'], obs[u'ZPos'], obs[u'YPos'])
         self.prev_s = current_s
         self.prev_a = a
 
@@ -80,7 +94,7 @@ class TabQAgent:
 
         total_reward = 0
         current_r = 0
-        tol = 0.1
+        tol = 0.5
 
         self.prev_s = None
         self.prev_a = None
@@ -105,7 +119,8 @@ class TabQAgent:
         obs = json.loads(world_state.observations[-1].text)
         prev_x = obs[u'XPos']
         prev_z = obs[u'ZPos']
-        print 'Initial position:', prev_x, ',', prev_z
+        prev_y = obs[u'YPos']
+        print 'Initial position:', prev_x, ',', prev_z, ',', prev_y
 
         # take first action
         total_reward += self.act(world_state, agent_host, current_r)
@@ -125,10 +140,10 @@ class TabQAgent:
                     break
                 if len(world_state.rewards) > 0 and not all(e.text == '{}' for e in world_state.observations):
                     obs = json.loads(world_state.observations[-1].text)
-                    curr_x = obs[u'XPos']
-                    curr_z = obs[u'ZPos']
+                    curr_x = obs[u'XPos'] #y
+                    curr_z = obs[u'ZPos'] #y
                     if require_move:
-                        if math.hypot(curr_x - prev_x, curr_z - prev_z) > tol:
+                        if math.hypot(curr_x - prev_x, curr_z - prev_z) > tol: #y
                             print 'received.'
                             break
                     else:
@@ -152,8 +167,8 @@ class TabQAgent:
                 assert num_frames_after_get >= num_frames_before_get, 'Fewer frames after getWorldState!?'
                 frame = world_state.video_frames[-1]
                 obs = json.loads(world_state.observations[-1].text)
-                curr_x = obs[u'XPos']
-                curr_z = obs[u'ZPos']
+                curr_x = obs[u'XPos'] #y
+                curr_z = obs[u'ZPos'] #y
                 print 'New position from observation:', curr_x, ',', curr_z, 'after action:', self.actions[
                     self.prev_a],  # NSWE
                 if check_expected_position:
@@ -181,6 +196,7 @@ class TabQAgent:
                 # act
                 total_reward += self.act(world_state, agent_host, current_r)
 
+
         # process final reward
         total_reward += current_r
 
@@ -203,7 +219,7 @@ agent_host = MalmoPython.AgentHost()
 
 # add some args
 agent_host.addOptionalStringArgument('mission_file',
-    'Path/to/file from which to load the mission.', './mazes/maze_simple.xml')
+    'Path/to/file from which to load the mission.', './mazes/maze_simple2.xml')
 agent_host.addOptionalFloatArgument('alpha',
     'Learning rate of the Q-learning agent.', 0.1)
 agent_host.addOptionalFloatArgument('epsilon',
@@ -244,7 +260,7 @@ for imap in xrange(num_maps):
     my_mission.removeAllCommandHandlers()
     #my_mission.allowAllDiscreteMovementCommands()
     my_mission.allowAllAbsoluteMovementCommands()
-    my_mission.requestVideo(320, 240)
+    my_mission.requestVideo(1200, 720)
     my_mission.setViewpoint(1)
 
     my_clients = MalmoPython.ClientPool()
@@ -254,10 +270,10 @@ for imap in xrange(num_maps):
     agentID = 0
     expID = 'tabular_q_learning'
 
-    num_repeats = 1500
+    num_repeats = 500
     cumulative_rewards = []
     for i in range(num_repeats):
-
+        steps_taken = 0
         print "\nMap %d - Mission %d of %d:" % (imap, i + 1, num_repeats)
 
         my_mission_record = MalmoPython.MissionRecordSpec("./save_%s-map%d-rep%d.tgz" % (expID, imap, i))
@@ -293,10 +309,11 @@ for imap in xrange(num_maps):
         cumulative_rewards += [cumulative_reward]
 
         # -- clean up -- #
-        time.sleep(0.5)  # (let the Mod reset)
+        steps.append(steps_taken)
+        time.sleep(0.6)  # (let the Mod reset)
 
     print "Done."
-
+    print steps
     print
     print "Cumulative rewards for all %d runs:" % num_repeats
     print cumulative_rewards
