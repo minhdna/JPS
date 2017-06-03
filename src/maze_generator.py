@@ -55,7 +55,7 @@ class TabQAgent:
         if not u'XPos' in obs or not u'ZPos' in obs or not u'YPos' in obs:
             return 0
         current_s = "%d:%d:%d" % (int(obs[u'XPos']), int(obs[u'ZPos']), int(obs[u'YPos'])) #add y here to change layers
-        print "State: ", current_s
+        #print "State: ", current_s
 
         if not self.q_table.has_key(current_s):
             self.q_table[current_s] = ([0] * len(self.actions))
@@ -67,7 +67,7 @@ class TabQAgent:
                                                                            + self.gamma * max(
                 self.q_table[current_s]) - old_q)
 
-        print "new Q_value: ", self.q_table[current_s]
+        #print "new Q_value: ", self.q_table[current_s]
         # select the next action
         rnd = random.random()
         if rnd < self.epsilon:
