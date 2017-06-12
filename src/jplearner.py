@@ -9,6 +9,7 @@ import time
 import random
 steps = []
 steps_taken = 0
+
 class TabQAgent:
     """Reinforcement learning agent for discrete state/action spaces."""
     def __init__(self, alpha=0.3, gamma=1.0, n=1.0):
@@ -18,6 +19,7 @@ class TabQAgent:
                     gamma:  <float>  value decay rate   (default = 1)
                     n:      <int>    number of back steps to update (default = 1)
                 """
+        random.seed(0) # for repeatable results
         self.epsilon = 0.01 # chance of taking a random action instead of the best
         self.actions = ["movenorth 1", "movesouth 1", "movewest 1", "moveeast 1", "jumpnorth 2", "jumpsouth 2", "jumpeast 2", "jumpwest 2"] #untranslated actions list
         #action list
