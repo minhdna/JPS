@@ -6,7 +6,7 @@ title: Status
 
 ### Project Summary
 
-The goal of JPS remains the same and it is to be able to continue solving 
+The goal of JPS remains the same and it is to be able to continue solving <br />
 progressingly intricate jumping puzzles. Our base line project, which we 
 have already achieved, is to solve a small 2D maze (5x4) that is only solveable 
 through jumping. That is, the AI may choose to walk through the maze 
