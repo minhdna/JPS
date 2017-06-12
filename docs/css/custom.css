@@ -22,6 +22,11 @@ body {
 
 }
 
+.entry-content p {
+max-width: 700px;
+margin: 0 auto 30px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
