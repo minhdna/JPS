@@ -3,4 +3,12 @@ layout: default
 title: Final Report
 ---
 
-# Coming soon...
+## Video
+
+## Project Summary
+
+## Approaches
+
+## Evaluation
+
+## References
