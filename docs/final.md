@@ -44,18 +44,16 @@ JPS will help unearth the answers to some of these questions! <br/>
 
 ## Approaches
 
-Once we got our project working, we tested it on a simple 5x4x1 dimension maze. The dimensions of this maze means that there is a 5 by 4 square of height one. This map and our agent's performance on this map is determined our baseline performance. The next step to increase the complexity was to create more complex maps. From here we generated maps with dimension 5x4x2 with the goal of the maze in the level above the start. This would require our agent to jump vertically, in addition to jumping horizontally.
-
-To do this we needed to introduce a Y-axis to our agent. We modified the agent's action state so that our agent will jump in the vertical Y-axis. The tabular Q agent now also accepts a vertical component into its world state and can progress vertically through a puzzle. To implement this into discreteMovementCommands() get our current position:
-    
-    obs = json.loads(world_state.observations[-1].text)
-
-We then look at our current state and choose the optimal policy. 
-
-    total_reward += self.act(world_state, agent_host, current_r)
-
-Once our agent is able to traverse puzzles of height 2, height becomes trivial and in theory, the agent should be able to solve puzzles of any height. From here is it a matter of creating more mazes for agent to run through and seeing how it performs.
-    
 ## Evaluation
 
 ## References
+
+### Images
+- https://www.technologyuk.net/computer-gaming/gaming-landmarks/images/gaming_landmarks_0094.gif
+- http://www.gamersdecide.com/sites/default/files/authors/u14586/4.jpg
+- https://cdn3.vox-cdn.com/uploads/chorus_asset/file/6276971/mad-preview-still-06.0.jpg
+- http://static.mnium.org/images/contenu/unes/big/gw2_jumping_puzzle_05.jpg
+- http://s3.vidimg.popscreen.com/original/2/ZHZuS0tvOEIxLWsx_o_funny-minecraft-jump.jpg
+- http://i42.tinypic.com/2a4tipu.png
+- http://i61.servimg.com/u/f61/15/81/88/32/jump_210.png
+
