@@ -68,6 +68,11 @@ it performs. <br/>
 
 ## References
 
+### Resources
+- https://github.com/Microsoft/malmo#getting-started
+- http://mnemstudio.org/path-finding-q-learning-tutorial.htm
+- https://en.wikipedia.org/wiki/Q-learning
+
 ### Images
 - https://www.technologyuk.net/computer-gaming/gaming-landmarks/images/gaming_landmarks_0094.gif
 - http://www.gamersdecide.com/sites/default/files/authors/u14586/4.jpg
