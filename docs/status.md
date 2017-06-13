@@ -2,6 +2,8 @@
 layout: default
 title: Status
 ---
+## Video
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1st-fbm4XwM" frameborder="0" allowfullscreen></iframe>
 
 ## Project Summary
