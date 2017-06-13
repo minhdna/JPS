@@ -60,12 +60,12 @@ We then look at our current state and choose the optimal policy. <br/>
 
     total_reward += self.act(world_state, agent_host, current_r)
    
-The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach <br/>
-with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table <br/>
-states. Adding more than one level increases the complexity of the agent's state space exponentially from O(mn) to <br/>
-O(mnt), there m,n, and t are the dimensions of the puzzle. The advantage of our approach is that comparing convergence <br/>
-times of maps of different levels and comparing this to the respective state space of each map allows us to evaluate <br/>
-the performance of our agent on larger maps and with more levels. <br/>
+<p>The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach
+with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table
+states. Adding more than one level increases the complexity of the agent's state space exponentially from O(mn) to
+O(mnt), there m,n, and t are the dimensions of the puzzle. The advantage of our approach is that comparing convergence
+times of maps of different levels and comparing this to the respective state space of each map allows us to evaluate
+the performance of our agent on larger maps and with more levels.</p>
 
 Once our agent is able to traverse puzzles of height 2, height becomes trivial and in theory, the agent should be able <br/>
 to solve puzzles of any height. From here, it is a matter of creating more mazes for the agent to run through and seeing <br/>
