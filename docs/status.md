@@ -4,7 +4,7 @@ title: Status
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1st-fbm4XwM" frameborder="0" allowfullscreen></iframe>
 
-### Project Summary
+## Project Summary
 
 The goal of JPS remains the same and it is to be able to continue solving progressingly intricate <br/>
 jumping puzzles. Our base line project, which we have already achieved, is to solve a small 2D maze <br/>
@@ -14,7 +14,7 @@ jumping. Our next milestone is to be able to solve a small maze with 2 floors (5
 we will continue to increase the size of the maze and add more floors. Our moonshot case is for our <br/>
 agent to be able to solve a large maze with 3 floors (10x10x3). 
 
-### Approach
+## Approach
 
 We started off the base of our algorithm expecting our agent to navigate through a map without using <br/>
 any jumping commands. We implemented a Q-learning algorithm using the agent’s coordinates as states <br/> 
@@ -40,7 +40,7 @@ our agent. We mainly focused on speeding up convergence speeds so we lowered the
 1.0 to 0.8. We also decided to lower epsilon to 0.01. We also changed the learning rate, alpha, to 0.2 from <br/>
 0.3. We believe that these changes have helped our agent find the optimal solution to the puzzle faster. <br/>
 
-### Evaluation
+## Evaluation
 
 To evaluate our learning agent, we keep track of 2 different values: the number of steps taken and the cumulative <br/>
 rewards. First, for the number of steps taken, we expect our agent to take a random number of steps (from 1 to 10) <br/>
@@ -66,7 +66,7 @@ dying a lot in the beginning, where it reaches really low negative rewards, the 
 correctly. Converging around 45th iteration, the graph flattens out at 96 points, where the agent takes the optimal <br/>
 4 steps to reach the destination. <br/>
 
-### Remaining Goals and Challenges
+## Remaining Goals and Challenges
 
 Currently, our agent is very limited in that it is only able to solve a very small, single-dimension maze that we <br/>
 generated ourselves. We hope to expand our agent so that it is able to solve multi-floor mazes. The bare-minimum in <br/>
