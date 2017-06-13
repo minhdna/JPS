@@ -74,8 +74,14 @@ how it performs. <br/>
 ## Evaluation
 Previously, our agent has proved that it can solve a jumping puzzle that has 1 level. But we wanted our agent to do better than that. So we made a few improvements to the agents, specifically changing the Q-table behavior and agent’s action space. We also change the reward penalty to +1000 and -1000 respectively to account for bigger map size. Then, we tested the agent on 2 complex maps to see if the agent can still reach its destinations. These maps are 2 layers (6x10x2) and 3 layers (8x8x3). For both maps, we keep track of the number of steps that the agent takes and the reward for each episodes. 
 
+<img src="https://puu.sh/wjjtZ/0a1fcf7c59.jpg" height="260" width="380">
+<img src="https://puu.sh/wjjxz/fcd126f67e.jpg" height="260" width="380">
+
 For the 2-layer-map, as you can see above, convergence occurs after about 70 iterations. The reward reaches approximately ~980 as the agent continues to improve and take less steps to reach the goal. Then, the graph flattens out at 9 steps. 
  
+<img src="https://puu.sh/wjjFN/c184a2ac52.jpg" height="260" width="380">
+<img src="https://puu.sh/wjjGA/ff824557d5.jpg" height="260" width="380">
+
 At 3-layer-map, we can expect the agent to take longer to reach its destination. This is because the 3-layer-map is more complex and bigger than the other 2 maps. We notice that the agent takes twice as long (about 140 iterations) to start converging. The agent also takes a lot longer to improve to its optimal point, where the number of step taken flattens out at approximately after 160 iterations.
  
 Despite that, we are happy that the agent was able to perform and reach its destination regardless of the map complexity. 
