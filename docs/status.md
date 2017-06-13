@@ -19,8 +19,8 @@ agent to be able to solve a large maze with 3 floors (10x10x3).
 We started off the base of our algorithm expecting our agent to navigate through a map without using <br/>
 any jumping commands. We implemented a Q-learning algorithm using the agent’s coordinates as states <br/> 
 and [movenorth, movesouth, moveeast, movewest] as our action space with an epsilon-greedy exploration <br/>
-policy. Every one step taken in any direction costs 1 point. If the agent dies, 100 points will be <br/>
-deducted from the total reward. Reaching the goal awards the agent 100 points. After our Q-learning <br/>
+policy. Every one step taken in any direction costs 1 point. If the agent dies, 100 points will be deducted <br/>
+from the total reward. Reaching the goal awards the agent 100 points. After our Q-learning <br/>
 algorithm started to work properly, we took it a step further toward our goal by implementing a map, <br/>
 where the agent must perform at least 1 jump in order to reach the goal node. The update equation of <br/>
 the Q-learning algorithm: 
