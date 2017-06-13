@@ -33,14 +33,12 @@ at a time. Therefore, we have to change our approach by implementing Absolute Mo
 allows us to easily implement how far we would want our agent to “jump”, or “walk” in order to tackle <br/>
 the challenging jumping puzzle. <br/>
 
-After creating an agent that will successfully converge on a simple map, we then created more 
-complex maps for our agent to solve. This tested the convergence rate of our agent and allowed us 
-to tweak the agent to perform better. We noticed the agent converged slowly for the simple puzzle
-so we changed some parameters of our agent. We mainly focused on speeding up convergence 
-speeds so we lowered the discount factor, gamma, from 1.0 to 0.8. We also decided to lower
-epsilon to 0.01. We also changed the learning rate, alpha, to 0.2 from 0.3. We believe that
-these changes have helped our agent find the optimal solution to the puzzle faster.
-
+After creating an agent that will successfully converge on a simple map, we then created more complex maps <br/>
+for our agent to solve. This tested the convergence rate of our agent and allowed us to tweak the agent to <br/>
+perform better. We noticed the agent converged slowly for the simple puzzle so we changed some parameters of <br/>
+our agent. We mainly focused on speeding up convergence speeds so we lowered the discount factor, gamma, from <br/>
+1.0 to 0.8. We also decided to lower epsilon to 0.01. We also changed the learning rate, alpha, to 0.2 from <br/>
+0.3. We believe that these changes have helped our agent find the optimal solution to the puzzle faster. <br/>
 
 ### Evaluation
 
