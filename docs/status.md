@@ -68,14 +68,12 @@ correctly. Converging around 45th iteration, the graph flattens out at 96 points
 
 ### Remaining Goals and Challenges
 
-Currently, our agent is very limited in that it is only able to solve a very small, 
-single-dimension maze that we generated ourselves. We hope to expand our agent so that 
-it is able to solve multi-floor mazes. The bare-minimum in which we consider our agent 
-a success is if it is able to solve a maze of 2 floors. Once it is able to solve a 2-level 
-maze, we are confident it can learn to solve 3 or 4-level maze. 
+Currently, our agent is very limited in that it is only able to solve a very small, single-dimension maze that we <br/>
+generated ourselves. We hope to expand our agent so that it is able to solve multi-floor mazes. The bare-minimum in <br/>
+which we consider our agent a success is if it is able to solve a maze of 2 floors. Once it is able to solve a <br/>
+2-level maze, we are confident it can learn to solve 3 or 4-level maze. <br/>
 
-The biggest challenge is for our agent to observe that the maze has 2 floors and make smart
-decisions based off of that. We're currently using a Q-table to represent the X and Z 
-of a single-level maze. One solution we're thinking about is to represent a multi-level maze in 
-a larger Q-table, keeping track of the X, Y, and Z. That is a difficult task in itself so our backup
-plan is to ignore the Y-value completely.
+The biggest challenge is for our agent to observe that the maze has 2 floors and make smart decisions based off of <br/>
+that. We're currently using a Q-table to represent the X and Z of a single-level maze. One solution we're thinking <br/>
+about is to represent a multi-level maze in a larger Q-table, keeping track of the X, Y, and Z. That is a difficult <br/>
+task in itself so our backup plan is to ignore the Y-value completely. <br/>
