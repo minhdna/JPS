@@ -25,15 +25,13 @@ started to work properly, we took it a step further toward our goal by implement
 agent must perform at least 1 jump in order to reach the goal node. The update equation of the Q-learning <br/>
 algorithm: Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * (r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>)) <br/>
  
-We needed to expand our action list to include jumping 2 blocks in
-order to get over gaps. This was when we faced our first challenge. When we 
-started, we originally let the agent navigate around a simple puzzle without using
-Discrete Movements. We realized that it is difficult (or even impossible) to
-have our agent jump 2 blocks (to get over gaps) since Malmo does not allow 
-discrete movements to move more than 1 block at a time. Therefore, we have to 
-change our approach by implementing Absolute Movement. Teleportation allows us 
-to easily implement how far we would want our agent to “jump”, or “walk” in 
-order to tackle the challenging jumping puzzle. 
+We needed to expand our action list to include jumping 2 blocks in order to get over gaps. This was when <br/>
+we faced our first challenge. When we started, we originally let the agent navigate around a simple puzzle <br/>
+without using Discrete Movements. We realized that it is difficult (or even impossible) to have our agent <br/>
+jump 2 blocks (to get over gaps) since Malmo does not allow discrete movements to move more than 1 block at a <br/>
+time. Therefore, we have to change our approach by implementing Absolute Movement. Teleportation allows us <br/>
+to easily implement how far we would want our agent to “jump”, or “walk” in order to tackle the challenging <br/>
+jumping puzzle. <br/>
 
 After creating an agent that will successfully converge on a simple map, we then created more 
 complex maps for our agent to solve. This tested the convergence rate of our agent and allowed us 
