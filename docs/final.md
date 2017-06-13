@@ -30,7 +30,11 @@ not utilize jumping. <br/>
 
 <img src="http://i61.servimg.com/u/f61/15/81/88/32/jump_210.png" height="260" width="380">
 
-Sounds simple enough right? Wrong. There are many complex attributes to a jumping puzzle. Jumping across a single-block hole is easy but what happens when the hole is 2-blocks large? Increasing the size of the maze is trivial (we deal with x and z coordinates) but how does the complexity scale when we add multiple layers to the maze (now we're dealing with x, z, AND y). How would the agent even know to jump to the floor above it? Stay tuned and JPS will help unearth the answers to some of these questions!
+Sounds simple enough right? Wrong. There are many complex attributes to a jumping puzzle. Jumping across a <br/>
+single-block hole is easy but what happens when the hole is 2-blocks large? Increasing the size of the maze <br/>
+is trivial (we deal with x and z coordinates) but how does the complexity scale when we add multiple layers <br/>
+to the maze (now we're dealing with x, z, AND y). How would the agent even know to jump to the floor above <br/>
+it? Stay tuned and JPS will help unearth the answers to some of these questions! <br/>
 
 <img src="http://i42.tinypic.com/2a4tipu.png" height="260" width="380">
 
