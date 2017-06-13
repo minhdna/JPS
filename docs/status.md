@@ -21,8 +21,9 @@ any jumping commands. We implemented a Q-learning algorithm using the agent’s 
 and [movenorth, movesouth, moveeast, movewest] as our action space with an epsilon-greedy exploration <br/>
 policy. Every one step taken in any direction costs 1 point. If the agent dies, 100 points will be deducted <br/>
 from the total reward. Reaching the goal awards the agent 100 points. After our Q-learning algorithm <br/>
-started to work properly, we took it a step further toward our goal by implementing a map, where the agent <br/>
-must perform at least 1 jump in order to reach the goal node. The update equation of the Q-learning algorithm: <br/>
+started to work properly, we took it a step further toward our goal by implementing a map, where the <br/>
+agent must perform at least 1 jump in order to reach the goal node. The update equation of the Q-learning <br/>
+algorithm:
 
   Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * (r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>))
  
