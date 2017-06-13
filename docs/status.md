@@ -23,9 +23,7 @@ policy. Every one step taken in any direction costs 1 point. If the agent dies, 
 from the total reward. Reaching the goal awards the agent 100 points. After our Q-learning algorithm <br/>
 started to work properly, we took it a step further toward our goal by implementing a map, where the <br/>
 agent must perform at least 1 jump in order to reach the goal node. The update equation of the Q-learning <br/>
-algorithm:
-
-  Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * (r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>))
+algorithm: Q(s<sub>t</sub>,a<sub>t</sub>) = Q(s<sub>t</sub>,a<sub>t</sub>) + a<sub>t</sub> * (r<sub>t+1</sub> + gamma * maxQ(s<sub>t+1</sub>,a) - Q(s<sub>t</sub>,a<sub>t</sub>))
  
 We needed to expand our action list to include jumping 2 blocks in
 order to get over gaps. This was when we faced our first challenge. When we 
