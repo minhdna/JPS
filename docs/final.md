@@ -11,11 +11,11 @@ The concept of a jumping puzzle has been around for decades. Think of a regular 
 
 <img src="http://s3.vidimg.popscreen.com/original/2/ZHZuS0tvOEIxLWsx_o_funny-minecraft-jump.jpg" height="260" width="380">
 
-The ability for a character to jump is a key mechanism in many successful games. Jumping Puzzles
+The ability for a character to jump is a key mechanism in many successful games. Jumping puzzles
 takes this mechanism to a whole new level in which the player’s knowledge of where to jump and
 when to jump can decide whether they pass the level or not. Games like Guild Wars and Assassin’s
-creed implement this feature to some extent while games like Super Mario are based entirely on
-Jumping Puzzles. A Jumping Puzzle AI would allow game developers to test whether a Jumping Puzzle
+creed implement this feature to some extent while games like Super Mario are a giant jumping puzzle in itself.
+A jumping puzzle AI would allow game developers to test whether a jumping puzzle
 is able to be completed/whether it is too easy or hard. The field of robotics is fairly new but that
 doesn’t stop researchers from having visions of robots saving people from catastrophes or fighting
 in wars in place of humans. Like Minecraft, the real world is not just flat lands. If a robot is
