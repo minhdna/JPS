@@ -44,6 +44,18 @@ JPS will help unearth the answers to some of these questions! <br/>
 
 ## Approaches
 
+Once we got our project working, we tested it on a simple 5x4x1 dimension maze. The dimensions of this maze means that there is a 5 by 4 square of height one. This map and our agent's performance on this map is determined our baseline performance. The next step to increase the complexity was to create more complex maps. From here we generated maps with dimension 5x4x2 with the goal of the maze in the level above the start. This would require our agent to jump vertically, in addition to jumping horizontally.
+
+To do this we needed to introduce a Y-axis to our agent. We modified the agent's action state so that our agent will jump in the vertical Y-axis. The tabular Q agent now also accepts a vertical component into its world state and can progress vertically through a puzzle. To implement this into discreteMovementCommands() get our current position:
+   
+   obs = json.loads(world_state.observations[-1].text)
+   
+We then look at our current state and choose the optimal policy. 
+
+   total_reward += self.act(world_state, agent_host, current_r)
+
+Once our agent is able to traverse puzzles of height 2, height becomes trivial and in theory, the agent should be able to solve puzzles of any height. From here is it a matter of creating more mazes for agent to run through and seeing how it performs.
+    
 ## Evaluation
 
 ## References
