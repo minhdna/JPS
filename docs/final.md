@@ -45,7 +45,7 @@ JPS will help unearth the answers to some of these questions! <br/>
 ## Approaches
 
 Once we got our project working, we tested it on a simple 5x4x1 dimension maze. The dimensions of this maze <br/>
-means that there is a 5 by 4 square of height one. This map and our agent's performance on this map is determined <br/>
+means that there is a 5 by 4 square of height one. This map and our agent's performance on this map will determine <br/>
 our baseline performance. The next step to increase the complexity was to create more complex maps. From here we <br/>
 generated maps with dimension 5x4x2 with the goal of the maze in the level above the start. This would require our <br/>
 agent to jump vertically, in addition to jumping horizontally. <br/>
@@ -59,7 +59,8 @@ progress vertically through a puzzle. To implement this into discreteMovementCom
 We then look at our current state and choose the optimal policy. <br/>
 
    total_reward += self.act(world_state, agent_host, current_r)
-
+   
+The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table states. Adding more than one level increases the complexity of the agent's state space exponentially from O(mn) to O(mnt), there m,n, and t are the dimensions of the puzzle. The advantage of our approach is that comparing convergence times of maps of different levels allows and comparing this to the respective state space of each map allows us to evaluate the perforamnce of our agent on larger maps and with more levels.
 Once our agent is able to traverse puzzles of height 2, height becomes trivial and in theory, the agent should be able <br/>
 to solve puzzles of any height. From here is it a matter of creating more mazes for agent to run through and seeing how <br/>
 it performs. <br/>
@@ -67,11 +68,6 @@ it performs. <br/>
 ## Evaluation
 
 ## References
-
-### Resources
-- https://github.com/Microsoft/malmo#getting-started
-- http://mnemstudio.org/path-finding-q-learning-tutorial.htm
-- https://en.wikipedia.org/wiki/Q-learning
 
 ### Images
 - https://www.technologyuk.net/computer-gaming/gaming-landmarks/images/gaming_landmarks_0094.gif
