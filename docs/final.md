@@ -54,11 +54,11 @@ To do this, we needed to introduce a Y-axis to our agent. We modified the agent'
 jump in the vertical Y-axis. The tabular Q agent now also accepts a vertical component into its world state and can <br/>
 progress vertically through a puzzle. To implement this into discreteMovementCommands() to get our current position: <br/>
    
-   obs = json.loads(world_state.observations[-1].text)
+    obs = json.loads(world_state.observations[-1].text)
    
 We then look at our current state and choose the optimal policy. <br/>
 
-   total_reward += self.act(world_state, agent_host, current_r)
+    total_reward += self.act(world_state, agent_host, current_r)
    
 The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach <br/>
 with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table <br/>
