@@ -30,7 +30,7 @@ jumping puzzle from a regular maze is that it is only solveable by jumping. That
 through the maze (if it leads to the optimal reward) but it can never reach the destination block if it does <br/>
 not utilize jumping. <br/>
 
-<img src="http://i61.servimg.com/u/f61/15/81/88/32/jump_210.png" height="260" width="380">
+<img src="http://i42.tinypic.com/2a4tipu.png" height="260" width="380">
 
 Sounds simple enough right? Wrong. There are many complex attributes to a jumping puzzle. Jumping across a <br/>
 single-block hole is easy but what happens when the hole is 2-blocks large? Increasing the size of the maze is trivial <br/>
@@ -38,7 +38,8 @@ single-block hole is easy but what happens when the hole is 2-blocks large? Incr
 we're dealing with x, z, AND y). How would the agent even know to jump to the floor above it? Stay tuned and <br/>
 JPS will help unearth the answers to some of these questions! <br/>
 
-<img src="http://i42.tinypic.com/2a4tipu.png" height="260" width="380">
+<img src="http://i61.servimg.com/u/f61/15/81/88/32/jump_210.png" height="260" width="380">
+
 
 
 ## Approaches
