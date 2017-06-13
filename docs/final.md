@@ -13,15 +13,15 @@ in this maze along with a jumping action to the action space and you have a jump
 
 <img src="http://s3.vidimg.popscreen.com/original/2/ZHZuS0tvOEIxLWsx_o_funny-minecraft-jump.jpg" height="260" width="380">
 
-The ability for a character to jump is a key mechanism in many successful games. Jumping puzzles takes this <br/>
-mechanism to a whole new level in which the player’s knowledge of where to jump and when to jump can decide <br/>
-whether they pass the level or not. Games like Guild Wars and Assassin’s creed implement this feature to some <br/>
-extent while games like Super Mario are a giant jumping puzzle in itself. A jumping puzzle AI would allow game <br/>
-developers to test whether a jumping puzzle is able to be completed/whether it is too easy or hard. The field <br/>
-of robotics is fairly new but that doesn’t stop researchers from having visions of robots saving people from <br/>
-catastrophes or fighting in wars in place of humans. Like Minecraft, the real world is not just flat lands. <br/>
-If a robot is going to perform those functions, it will need to be able to, not only walk, but to learn to <br/>
-climb and maybe even jump! <br/>
+The ability for a character to jump is a key mechanism in many successful games. Jumping puzzles takes <br/>
+this mechanism to a whole new level in which the player’s knowledge of where to jump and when to jump <br/>
+can decide whether they pass the level or not. Games like Guild Wars and Assassin’s creed implement this <br/>
+feature to some extent while games like Super Mario are a giant jumping puzzle in itself. A jumping puzzle <br/>
+AI would allow game developers to test whether a jumping puzzle is able to be completed/whether it is too <br/>
+easy or hard. The field of robotics is fairly new but that doesn’t stop researchers from having visions <br/>
+of robots saving people from catastrophes or fighting in wars in place of humans. Like Minecraft, the real <br/>
+world is not just flat lands. If a robot is going to perform those functions, it will need to be able to, <br/>
+not only walk, but to learn to climb and maybe even jump! <br/>
 
 In our project, we give our agent, JPS, progressingly intricate jumping puzzles to solve. What separates a jumping puzzle from a regular maze is that it is only solveable by jumping. That is, JPS may choose to walk through the maze (if it leads to the optimal reward) but it can never reach the destination block if it does not utilize jumping.
 
