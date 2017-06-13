@@ -23,6 +23,8 @@ of robots saving people from catastrophes or fighting in wars in place of humans
 world is not just flat lands. If a robot is going to perform those functions, it will need to be able to, <br/>
 not only walk, but to learn to climb and maybe even jump! <br/>
 
+<img src="http://i.imgur.com/djUfPkH.jpg" height="260" width="380">
+
 In our project, we give our agent, JPS, progressingly intricate jumping puzzles to solve. What separates a <br/>
 jumping puzzle from a regular maze is that it is only solveable by jumping. That is, JPS may choose to walk <br/>
 through the maze (if it leads to the optimal reward) but it can never reach the destination block if it does <br/>
