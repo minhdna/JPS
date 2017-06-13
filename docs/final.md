@@ -7,9 +7,9 @@ title: Final Report
 
 ## Project Summary
 
-The concept of a jumping puzzle has been around for decades. Think of a regular maze, where you have a <br/>
-start point and must reach the end point through a series of up, down, left, right actions. Now add holes <br/>
-in this maze along with a jumping action to the action space and you have a jumping puzzle. <br/>
+The concept of a jumping puzzle has been around for decades. Think of a regular maze, where you have <br/>
+a start point and must reach the end point through a series of up, down, left, right actions. Now add <br/>
+holes in this maze along with a jumping action to the action space and you have a jumping puzzle. <br/>
 
 <img src="http://s3.vidimg.popscreen.com/original/2/ZHZuS0tvOEIxLWsx_o_funny-minecraft-jump.jpg" height="260" width="380">
 
