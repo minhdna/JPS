@@ -17,4 +17,4 @@ title:  Meet the Team
 ## Tony Lee
 ***UCI Net ID***: tonyhl1
 
-<img src="https://scontent.xx.fbcdn.net/v/t34.0-12/17814078_10203000922299572_52135321_n.gif?fallback=1&oh=336137c7c4a8228745fc9dc4e0e233fa&oe=5928AB27" height="300" width="300">
+<img src="http://theprofessionalhobo.zenfolio.com/img/v27/p22408505-2.jpg" height="300" width="300">
