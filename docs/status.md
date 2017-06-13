@@ -42,28 +42,29 @@ our agent. We mainly focused on speeding up convergence speeds so we lowered the
 
 ### Evaluation
 
-To evaluate our learning agent, we keep track of 2 different values: the number of 
-steps taken and the cumulative rewards. First, for the number of steps taken, we 
-expect our agent to take a random number of steps (from 1 to 10) in the beginning. 
-Later on, as the agent learns the map, it should plateau around 4 steps, which is the 
-optimal amount of steps to reach the goal. 
-<img src="https://puu.sh/w25BG/124e5bad71.jpg" height="260" width="380" alt="Steps Taken"> 
-As you can see from our graph above, the number of steps taken at the beginning are small, 
-but fluctuate between 1 and 7. This is different than other solving mazes, where it should be 
-very large in the beginning. This is because the simple jumping puzzle that the agent runs
-on have very limited amount of possible moves (where he can survive) in the beginning.
-The graph also plateaued as expected around 4 moves, which means our agent is learning 
-the jumping puzzle successfully.
+To evaluate our learning agent, we keep track of 2 different values: the number of steps taken and the cumulative <br/>
+rewards. First, for the number of steps taken, we expect our agent to take a random number of steps (from 1 to 10) <br/>
+in the beginning. Later on, as the agent learns the map, it should plateau around 4 steps, which is the optimal <br/>
+amount of steps to reach the goal. <br/>
 
-Another evaluation we did on our learning agent is to assess the 
-cumulative reward. For this evaluation, we expect the agent's reward to be extremely low (> -100) 
-in the beginning, where it dies alot. Later on, we expect the cummulative reward to be consistently 
-high (96 points) as the agent converges. 
+<img src="https://puu.sh/w25BG/124e5bad71.jpg" height="260" width="380" alt="Steps Taken"> 
+
+As you can see from our graph above, the number of steps taken at the beginning are small, but fluctuate between 1 <br/>
+and 7. This is different than other solving mazes, where it should be very large in the beginning. This is because <br/>
+the simple jumping puzzle that the agent runs on have very limited amount of possible moves (where he can survive) <br/>
+in the beginning. The graph also plateaued as expected around 4 moves, which means our agent is learning the jumping <br/>
+puzzle successfully. <br/>
+
+Another evaluation we did on our learning agent is to assess the cumulative reward. For this evaluation, we expect <br/>
+the agent's reward to be extremely low (> -100) in the beginning, where it dies alot. Later on, we expect the <br/>
+cumulative reward to be consistently high (96 points) as the agent converges. <br/>
+
 <img src="https://puu.sh/w25Za/618b9e08f2.jpg" height="260" width="380" alt="Cumulative Reward"> 
-As expected, the graph above shows that our agent is able to learn and navigate through the jumping 
-puzzle. After dying a lot in the beginning, where it reaches really low negative rewards, the agent 
-was able to learn to navigate correctly. Converging around 45th iteration, the graph flattens out at 
-96 points, where the agent takes the optimal 4 steps to reach the destination. 
+
+As expected, the graph above shows that our agent is able to learn and navigate through the jumping puzzle. After <br/>
+dying a lot in the beginning, where it reaches really low negative rewards, the agent was able to learn to navigate <br/>
+correctly. Converging around 45th iteration, the graph flattens out at 96 points, where the agent takes the optimal <br/>
+4 steps to reach the destination. <br/>
 
 ### Remaining Goals and Challenges
 
