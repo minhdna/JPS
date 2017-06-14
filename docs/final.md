@@ -58,35 +58,49 @@ progress vertically through a puzzle. To implement this into discreteMovementCom
    
    obs = json.loads(world_state.observations[-1].text)
    
-We then look at our current state and choose the optimal policy. <br/>
+We then look at our current state and choose the optimal policy: <br/>
 
    total_reward += self.act(world_state, agent_host, current_r)
    
-<p>The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach
-with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table
-states. Adding more than one level increases the complexity of the agent's state space exponentially from O(mn) to
-O(mnt), there m,n, and t are the dimensions of the puzzle. The advantage of our approach is that comparing convergence
-times of maps of different levels and comparing this to the respective state space of each map allows us to evaluate
-the performance of our agent on larger maps and with more levels.</p>
+The new agent and the new maps with more than one level define our proposed approach. Comparing <br/>
+the proposed approach with our baseline, the baseline is very simple. The map is two-dimensional <br/>
+and only requires n by m unique q-table states. Adding more than one level increases the complexity <br/>
+of the agent's state space exponentially from O(mn) to O(mnt), there m,n, and t are the dimensions <br/>
+of the puzzle. The advantage of our approach is that comparing convergence times of maps of different <br/>
+levels and comparing this to the respective state space of each map allows us to evaluate the performance <br/>
+of our agent on larger maps and with more levels. <br/>
 
 Once our agent is able to traverse puzzles of height 2, height becomes trivial and in theory, the agent should be able <br/>
 to solve puzzles of any height. From here, it is a matter of creating more mazes for the agent to run through and seeing <br/>
 how it performs. <br/>
     
 ## Evaluation
-Previously, our agent has proved that it can solve a jumping puzzle that has 1 level. But we wanted our agent to do better than that. So we made a few improvements to the agents, specifically changing the Q-table behavior and agent’s action space. We also change the reward penalty to +1000 and -1000 respectively to account for bigger map size. Then, we tested the agent on 2 complex maps to see if the agent can still reach its destinations. These maps are 2 layers (6x10x2) and 3 layers (8x8x3). For both maps, we keep track of the number of steps that the agent takes and the reward for each episodes. 
+
+Previously, our agent has proved that it can solve a jumping puzzle that has 1 level. But we wanted <br/>
+our agent to do better than that. So we made a few improvements to the agents, specifically changing <br/>
+the Q-table behavior and agent’s action space. We also change the reward penalty to +1000 and -1000 <br/>
+respectively to account for bigger map size. Then, we tested the agent on 2 complex maps to see if the <br/>
+agent can still reach its destinations. These maps are 2 layers (6x10x2) and 3 layers (8x8x3). For both <br/>
+maps, we keep track of the number of steps that the agent takes and the reward for each episodes. <br/>
 
 <img src="https://puu.sh/wjjtZ/0a1fcf7c59.jpg" height="260" width="380"><img src="https://puu.sh/wjjxz/fcd126f67e.jpg" height="260" width="380">
 
-For the 2-layer-map, as you can see above, convergence occurs after about 70 iterations. The reward reaches approximately ~990 as the agent continues to improve and take less steps to reach the goal. Then, the graph flattens out at 9 steps. 
+For the 2-layer-map, as you can see above, convergence occurs after about 70 iterations. The reward <br/>
+reaches approximately ~990 as the agent continues to improve and take less steps to reach the goal. <br/>
+Then, the graph flattens out at 9 steps. <br/>
  
 <img src="https://puu.sh/wjjFN/c184a2ac52.jpg" height="260" width="380"><img src="https://puu.sh/wjjGA/ff824557d5.jpg" height="260" width="380">
 
-At 3-layer-map, we can expect the agent to take longer to reach its destination. This is because the 3-layer-map is more complex and bigger than the other 2 maps. We notice that the agent takes twice as long (about 140 iterations) to start converging. The agent also takes a lot longer to improve to its optimal point, where the number of step taken flattens out at approximately after 160 iterations.
+At 3-layer-map, we can expect the agent to take longer to reach its destination. This is because the <br/>
+3-layer-map is more complex and bigger than the other 2 maps. We notice that the agent takes twice as <br/>
+long (about 140 iterations) to start converging. The agent also takes a lot longer to improve to its <br/>
+optimal point, where the number of step taken flattens out at approximately after 160 iterations. <br/>
  
-Despite that, we are happy that the agent was able to perform and reach its destination regardless of the map complexity. 
+Despite that, we are happy that the agent was able to perform and reach its destination regardless <br/>
+of the map complexity. <br/>
 
 ## References
+
 ### Resources
 - https://github.com/Microsoft/malmo#getting-started
 - http://mnemstudio.org/path-finding-q-learning-tutorial.htm
