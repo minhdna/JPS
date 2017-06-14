@@ -25,6 +25,6 @@ title:  Home
 
 #### Through the use of Microsoft's Project Malmo platform, JPS hopes to pioneer the first Minecraft AI 
 #### that is able to solve multi-floor jumping puzzles in the world of Minecraft. 
-<img src="https://puu.sh/w0wPo/f3745cdb44.jpg" height="260" width="380">
+<img src="https://gyazo.com/0cbaef11b959559d1ad19fd6620dd2b1" height="260" width="380">
 
 [quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
