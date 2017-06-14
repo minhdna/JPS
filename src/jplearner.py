@@ -9,7 +9,6 @@ import time
 import random
 steps = []
 steps_taken = 0
-
 class TabQAgent:
     """Reinforcement learning agent for discrete state/action spaces."""
     def __init__(self, alpha=0.3, gamma=1.0, n=1.0):
@@ -19,7 +18,6 @@ class TabQAgent:
                     gamma:  <float>  value decay rate   (default = 1)
                     n:      <int>    number of back steps to update (default = 1)
                 """
-        random.seed(0) # for repeatable results
         self.epsilon = 0.01 # chance of taking a random action instead of the best
         self.actions = ["movenorth 1", "movesouth 1", "movewest 1", "moveeast 1", "jumpnorth 2", "jumpsouth 2", "jumpeast 2", "jumpwest 2"] #untranslated actions list
         #action list
@@ -42,7 +40,7 @@ class TabQAgent:
         agent_host.sendCommand(command_verb)
         #for recording --> evaluation
         steps_taken += 1
-        time.sleep(1.0)
+        time.sleep(.75)
 
 
     def act(self, world_state, agent_host, current_r):
@@ -271,6 +269,7 @@ for imap in xrange(num_maps):
     cumulative_rewards = []
     for i in range(num_repeats):
         steps_taken = 0
+        time.sleep(1.0)
         print "\nMap %d - Mission %d of %d:" % (imap, i + 1, num_repeats)
 
         my_mission_record = MalmoPython.MissionRecordSpec("./save_%s-map%d-rep%d.tgz" % (expID, imap, i))
