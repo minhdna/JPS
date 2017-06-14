@@ -105,6 +105,9 @@ of the map complexity. <br/>
 - https://github.com/Microsoft/malmo#getting-started
 - http://mnemstudio.org/path-finding-q-learning-tutorial.htm
 - https://en.wikipedia.org/wiki/Q-learning
+- https://youtu.be/A1JgUikiuRc 
+- https://youtu.be/Boq3ghiTKHA 
+- https://youtu.be/uoEJk6VgdJ8
 
 ### Images
 - https://www.technologyuk.net/computer-gaming/gaming-landmarks/images/gaming_landmarks_0094.gif
