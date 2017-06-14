@@ -5,7 +5,7 @@ title: Final Report
 
 ## Video
 
-[![Description of the Video](https://gyazo.com/b9c892992f71af605acbd83e54a59771)](https://www.youtube.com/watch?v=OOP1xdJY1Us)
+[![Description of the Video](https://img.youtube.com/vi/FI3aW0RabBg/0.jpg)](https://www.youtube.com/watch?v=OOP1xdJY1Us)
 
 ## Project Summary
 
