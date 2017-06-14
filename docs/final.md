@@ -5,7 +5,7 @@ title: Final Report
 
 ## Video
 
-[![Description of the Video](https://img.youtube.com/vi/OOP1xdJY1Us/0.jpg)](https://www.youtube.com/watch?v=OOP1xdJY1Us)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOP1xdJY1Us" frameborder="0" allowfullscreen></iframe>
 
 ## Project Summary
 
