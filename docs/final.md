@@ -5,6 +5,8 @@ title: Final Report
 
 ## Video
 
+[![Description of the Video](https://img.youtube.com/vi/FI3aW0RabBg/0.jpg)](https://www.youtube.com/watch?v=OOP1xdJY1Us)
+
 ## Project Summary
 
 The concept of a jumping puzzle has been around for decades. Think of a regular maze, where you have a <br/>
