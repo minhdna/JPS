@@ -76,7 +76,7 @@ Previously, our agent has proved that it can solve a jumping puzzle that has 1 l
 
 <img src="https://puu.sh/wjjtZ/0a1fcf7c59.jpg" height="260" width="380"><img src="https://puu.sh/wjjxz/fcd126f67e.jpg" height="260" width="380">
 
-For the 2-layer-map, as you can see above, convergence occurs after about 70 iterations. The reward reaches approximately ~980 as the agent continues to improve and take less steps to reach the goal. Then, the graph flattens out at 9 steps. 
+For the 2-layer-map, as you can see above, convergence occurs after about 70 iterations. The reward reaches approximately ~990 as the agent continues to improve and take less steps to reach the goal. Then, the graph flattens out at 9 steps. 
  
 <img src="https://puu.sh/wjjFN/c184a2ac52.jpg" height="260" width="380"><img src="https://puu.sh/wjjGA/ff824557d5.jpg" height="260" width="380">
 
