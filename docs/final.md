@@ -60,7 +60,7 @@ progress vertically through a puzzle. To implement this into discreteMovementCom
    
 We then look at our current state and choose the optimal policy. <br/>
 
-    total_reward += self.act(world_state, agent_host, current_r)
+   total_reward += self.act(world_state, agent_host, current_r)
    
 <p>The new agent and the new maps with more than one level define our proposed approach. Comparing the proposed approach
 with our baseline, the baseline is very simple. The map is two-dimensional and only requires n by m unique q-table
